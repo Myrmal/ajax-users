@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="views/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="views/script/ajaxCities.js"></script>
+</head>
+<body>
+<a href="index.php">Пользователи</a>
+<a href="cities.php">Города</a>
+<div class="content-table">
+<div id="result" class="table">
+    <? $db->resultCitiesTable() ?>
+</div>
+
+<div class="table">
+<form id="send-message-form" class="table-row">
+    <div class="table-cell">
+        <button id="button" type="submit" class="">Добавить</button>
+    </div>
+    <div class="table-cell">
+        <input id="add_city" class="form-control" type="text" required>
+    </div>
+</form>
+</div>
+</div>
+</body>
+</html>

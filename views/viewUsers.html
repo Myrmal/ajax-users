@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="views/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="views/script/ajaxUsers.js"></script>
+    <title>Ajax user-city table</title>
+</head>
+<body>
+<a href="index.php">Пользователи</a>
+<a href="cities.php">Города</a>
+<div class="content-table">
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell">ID</div>
+        <div class="table-cell">Имя</div>
+        <div class="table-cell">Возраст</div>
+        <div class="table-cell">Город</div>
+    </div>
+</div>
+
+<div id="result" class="table">
+    <?php $db->resultUsersTable(); ?>
+</div>
+<div class="table">
+    <form id="send-message-form" class="table-row">
+        <div class="table-cell">
+            <button id="button" type="submit" class="">Добавить</button>
+        </div>
+        <div class="table-cell">
+            <input id="add_name" class="form-control" type="text" required>
+        </div>
+        <div class="table-cell">
+            <input id="add_age" class="form-control" type="number" min="0" max="99" required>
+        </div>
+        <div class="table-cell">
+            <select id="add_city">
+                <option value="0">Город не выбран</option>
+                <?php $db->getSelectCities(); ?>
+            </select>
+        </div>
+    </form>
+</div>
+</div>
+
+<script>
+
+
+
+</script>
+</body>
+</html>

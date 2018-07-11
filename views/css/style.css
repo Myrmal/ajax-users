@@ -1,0 +1,20 @@
+.content-table{
+    min-width:50%;
+}
+.table{
+    display:table;
+    width:100%;
+}
+
+.table-row{
+    display: table-row;
+    line-height: 25px;
+    height: 25px;
+}
+.table-cell{
+    border: solid 1px gainsboro;
+    display: table-cell;
+    text-align: center;
+    width: 25%;
+    /*max-width: 25%;*/
+}
