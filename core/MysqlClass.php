@@ -3,10 +3,12 @@
 class MysqlClass
 {
     private $city_id = 0;
-    private $db_user ="root";
+
+    /*подключение к бд*/
+    private $db_user ="";
     private $db_password = "";
-    private $db_host = "localhost";
-    private $db_name = "users-sity";
+    private $db_host = "";
+    private $db_name = "";
 
     private function connectionMysql()
     {
