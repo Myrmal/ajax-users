@@ -3,12 +3,14 @@
 class MysqlClass
 {
     private $city_id = 0;
+    private $db_user ="root";
+    private $db_password = "";
+    private $db_host = "localhost";
+    private $db_name = "users-sity";
 
     private function connectionMysql()
     {
-        $user = "root";
-        $pass = "";
-        $db = new PDO('mysql:host=localhost; dbname=users-sity', $user, $pass);
+        $db = new PDO('mysql:host='.$this->db_host.'; dbname='.$this->db_name, $this->db_user, $this->db_password);
         return $db;
     }
 
